@@ -15,6 +15,9 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.18.1",
+    "eos-transit": "^4.0.2",
+    "eos-transit-scatter-provider": "^4.0.2",
+    "eosjs": "^20.0.0",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
