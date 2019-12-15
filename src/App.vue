@@ -1,7 +1,7 @@
 <template lang="pug">
   div(id="q-app")
-    router-view(:thisUser="thisUser")
-    div()
+    router-view(:thisUser="thisUser" :lang="lang")
+    div
       q-dialog(v-model="showModal" @close="thisModal=null")
         component(:is="activeModal")
 </template>
@@ -15,7 +15,8 @@ export default {
     return {
       activeModal:false,
       showModal:false,
-      thisUser:null
+      thisUser:null,
+      lang:'EN'
     }
   },
   mounted(){
@@ -50,9 +51,9 @@ export default {
           const candidates = (await this.$eos.getCandidates()).map(el => el.candidate_name)
           const existing = candidates.find(el => el === JSON.parse(localUser).username)
           if (existing) {
+            this.thisUser = JSON.parse(localUser)
             if (this.$route.name === "Learn") return
             this.$router.push({name:"Learn"})
-            this.thisUser = JSON.parse(localUser)
           } else {
             window.localStorage.clear()
             this.thisUser = null

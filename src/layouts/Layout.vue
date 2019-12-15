@@ -2,7 +2,7 @@
   q-layout(view="lHh Lpr lFf")
     q-header(elevated)
       q-toolbar.text-white.shadow-0
-        div(style="width:150px; height:100px;").q-pa-xs.relative-position
+        div(style="width:150px; height:80px;").q-pa-xs.relative-position
           img(src="statics/vig.svg").absolute-center.on-right  
         q-toolbar-title(flat)
           h4.q-ma-xs.text-light-paragraph.q-pl-sm Earn
