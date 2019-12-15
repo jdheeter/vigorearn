@@ -2,61 +2,54 @@
   q-page
     .flex.flex-center
       div
-        h4 Register Custodianship
-    .row.flex-center
-      .col.col-md-10
-        q-card.q-ma-md.q-pa-md
-          .q-pa-md
-            h6.text-center Before you start you need to have #[a(href="https://get-scatter.com" target="_blank") Scatter] installed and own an EOS account.
-          .row.justify-center
-            .col.col-sm-12.col-md-4
-              q-card.q-ma-md.q-pa-md(style="min-height:500px;").bg-grey-8
-                .row.justify-center(style="min-height:350px;")
-                  img(src="statics/step1.png" style="min-width:200px; max-width:400px; object-fit: contain;")
-                .row
-                  .col-auto
-                    h4 1
-                  .col
-                    div.q-pa-md
-                      h6.q-ma-xs Visit #[a(href="https://vig.ai" target="_blank") vig.ai] and select #[strong LOGIN]. Follow the prompt from the Scatter popup.
-            .col.col-sm-12.col-md-4
-              q-card.q-ma-md.q-pa-md(style="min-height:500px;").bg-grey-8
-                .row.justify-center(style="min-height:350px;")
-                  img(src="statics/step2.png" style="min-width:200px; max-width:400px; object-fit: scale-down;")
-                .row
-                  .col-auto
-                    h4 2
-                  .col
-                    div.q-pa-md
-                      h6.q-ma-xs Navigate to #[strong Sign the Consitution], read the constitution, click the #[strong SIGN] button.
-            .col.col-sm-12.col-md-4
-              q-card.q-ma-md.q-pa-md(style="min-height:500px;").bg-grey-8
-                .row.justify-center(style="min-height:350px;")
-                  img(src="statics/step3.png" style="min-width:200px; max-width:400px; object-fit: contain;")
-                .row
-                  .col-auto
-                    h4 3
-                  .col
-                    div.q-pa-md
-                      h6.q-ma-xs Navigate to #[strong Register As Custodian], fill in the required information, click the #[strong REGISTER] button.
-          .q-pa-xs
-            h6.text-center If you have any questions, just ask in the #[a(href="https://t.me/vigorstablecoin" target="_blank") Vigor Telegram] chatroom.
-          .q-pa-xs
-            h6.text-center.q-ma-xs After you have registered, simply login on this page to continue.
-          .row.justify-center.q-ma-lg
-            q-btn(size="lg" color="primary" @click="$root.$emit('modal','auth')") Login
-          .row.q-ma-xl
-
+        h3.text-grey-3.q-mb-md.text-center Register  Candidateship
+    .row.justify-center
+      q-card.col.col-md-10.q-ma-md.q-pa-md
+        .q-pa-md
+          h6.text-center Before you start you need to have #[a(href="https://get-scatter.com" target="_blank") Scatter] installed and own an EOS account.
+        .row.justify-center.q-gutter-lg   
+          q-card.col.col-auto.col-md-4.q-pa-md.bg-grey-9(v-for="(step,index) of stepsLang" :key="step")
+            .row.justify-center(style="min-height:350px; flex-grow: 12;")
+              img(:src="`statics/step${index+1}.png`" style="min-width:200px; max-width:400px; object-fit: contain;")
+            .row
+              .col-auto
+                h4 {{index+1}}
+              .col
+                div.q-pa-md
+                  h6.q-ma-xs 
+                    md(:anchorAttributes="newTab" :source="step")
+        h6.text-center If you have any questions, just ask in the #[a(href="https://t.me/vigorstablecoin" target="_blank") Vigor Telegram] chatroom.
+        .q-pa-xs
+          h6.text-center.q-ma-xs After you have registered, simply login on this page to continue.
+        .row.justify-center.q-ma-lg
+          q-btn(size="lg" color="primary" @click="$root.$emit('modal','auth')") Login
+        .row.q-ma-xl
+        
 </template>
 <script>
-console.log('Index')
-export default { name: 'Index', props:['thisUser'],
+const steps = require('../registerInstructions')
+export default { name: 'Index', props:['thisUser'], components:[],
   data(){
     return {
+      newTab:{target: '_blank'},
+      steps
     }
   },
   methods:{
 
+  },
+  computed:{
+    stepsLang(){
+      return steps['EN']
+    }
   }
  }
 </script>
+<style>
+/* 
+.col {
+  flex: 1;
+
+} */
+  
+</style>

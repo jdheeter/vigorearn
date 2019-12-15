@@ -18,7 +18,8 @@
     "eos-transit": "^4.0.2",
     "eos-transit-scatter-provider": "^4.0.2",
     "eosjs": "^20.0.0",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0",

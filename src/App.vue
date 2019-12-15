@@ -50,6 +50,7 @@ export default {
           const candidates = (await this.$eos.getCandidates()).map(el => el.candidate_name)
           const existing = candidates.find(el => el === JSON.parse(localUser).username)
           if (existing) {
+            if (this.$route.name === "Learn") return
             this.$router.push({name:"Learn"})
             this.thisUser = JSON.parse(localUser)
           } else {

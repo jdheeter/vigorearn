@@ -3,17 +3,15 @@
     q-header(elevated)
       q-toolbar.text-white.shadow-0
         div(style="width:150px; height:100px;").q-pa-xs.relative-position
-          img(src="statics/vig.svg").absolute-center  
+          img(src="statics/vig.svg").absolute-center.on-right  
         q-toolbar-title(flat)
-          h2.q-ma-xs Earn
+          h4.q-ma-xs.text-light-paragraph.q-pl-sm Earn
         div(v-if="thisUser")
           .row
             q-toolbar-title {{thisUser.username}}
             q-btn.inline(@click="$root.$emit('logout')" flat color="red")
               q-tooltip Logout
               q-icon(name="logout")
-        div(v-else)
-          q-btn(@click="$root.$emit('modal','auth')" color="primary" size="xl") login
     //- q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="traycolor" :width="55" :breakpoint="100")
     //-   q-item-label(header)
     //-   q-list {{$router.route}}
