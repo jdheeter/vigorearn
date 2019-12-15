@@ -1,11 +1,12 @@
 <template lang="pug">
   q-layout(view="lHh Lpr lFf")
     q-header(elevated)
-      q-toolbar.text-white.shadow-0
-        div(style="width:150px; height:80px;").q-pa-xs.relative-position
-          img(src="statics/vig.svg").absolute-center.on-right  
-        q-toolbar-title(flat)
-          h4.q-ma-xs.text-light-paragraph.q-pl-sm Earn
+      q-toolbar.text-white.shadow-0(flat)
+        .row.items-center
+          div.q-pa-sm
+            img(src="statics/vig.svg" style="width:150px; height:60px;").q-mt-sm   
+        q-toolbar-title.no-margin.no-padding
+          h4.text-light-paragraph.no-margin Earn
         div(v-if="thisUser")
           .row
             q-toolbar-title {{thisUser.username}}
