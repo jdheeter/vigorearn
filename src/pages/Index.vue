@@ -4,7 +4,7 @@
       div
         h3.text-grey-3.q-mb-md.text-center {{getText(5)}}
     .row.flex-center
-      .col.col-md-10
+      .col.col-md-10.col-lg-8.col-xl-6
         q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
           h5.q-ma-md.text-center {{getText(0)}}
           .q-ma-sm
@@ -41,12 +41,11 @@ export default { name: 'Index', props:['thisUser'],
     }
   },
   methods:{
-    
+
   },
   computed:{
-    getText(){
-      var vm = this
-      return index => text[vm.lang][index]
+    getText(index){
+      return index => text[this.$lang][index]
     }
   }
  }
