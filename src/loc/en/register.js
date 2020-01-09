@@ -1,5 +1,11 @@
 module.exports = {
-  EN: [
+  text: [
+    'Before you start you need to have [Scatter](https://get-scatter.com) installed and own an EOS account.',
+    'Register  Candidateship',
+    'If you have any questions, just ask in the [Vigor Telegram](https://t.me/vigorstablecoin) chatroom.',
+    'After you have registered, simply login on this page to continue.'
+  ],
+  steps: [
     'Visit [vigor.ai](https://vigor.ai) and select **LOGIN**. Follow the prompt from the Scatter popup.',
     'Navigate to **Sign the Consitution**, read the constitution, click the **SIGN** button.',
     'Fill out your Candiate Profile',

@@ -49,8 +49,11 @@ export default { name: 'Index', props:['thisUser'], components:[],
 
   },
   computed:{
-    text(){ return text[this.$lang]},
-    steps(){ return steps[this.$lang]}
+    lang(){
+      return this.$lang[this.$route.name.toLowerCase()]
+    },
+    text(){return this.lang.text},
+    steps(){return this.lang.steps}
   }
  }
 </script>

@@ -29,6 +29,8 @@ export default {
       this.$root.$on('modal',this.handleModal)
       this.$root.$on('set',this.handleSet)
       this.$root.$on('logout',this.handleLogout)
+      const selectedLang = window.localStorage.getItem('lang')
+      if (selectedLang) this.$lang.setLang(selectedLang)
     },
     handleModal(data){
       if (data) this.showModal = true
@@ -65,7 +67,12 @@ export default {
       }
 
     }
+  },
+  watch:{
+    '$lang.current_lang'(lang){
+      console.log('lang change',lang)
+      window.localStorage.setItem('lang',lang)
+    }
   }
-  
   }
 </script>

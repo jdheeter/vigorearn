@@ -56,44 +56,6 @@
                   h6.q-pa-md.q-ma-xs Stay tuned....
 </template>
 <script>
-const text = {
-  EN:[
-    `Learn about Vigor DAC`,
-    `Three different levels to test your knowledge.`
-  ]
-}
-const tabs = {
-  EN:[
-    `Beginner`,
-    `Intermediate`,
-    `Advanced`
-  ]
-}
-const pages = {
-  EN:[
-    {
-      active:true,
-      text:[
-      `Learn the basics`,
-      `Read Educational Materials`,
-      `Complete Quiz`,
-      `If you answered correctly, you will receive VIG tokens.`
-      ],
-      link:[
-        `https://docs.google.com/document/d/14ewVW60IWGE04mVAcKjAJWLI-K1MP5-DCMOdkgo1hKI/edit`,
-        `https://docs.google.com/forms/d/e/1FAIpQLSfST_oj2wwPlLw-DIZXTKDrins6aSqs5rI8BrcD3MKq2HNQtA/viewform`
-      ]
-    },
-    {
-      active:false,
-      text:['Coming soon!']
-    },
-    {
-      active:false,
-      text:['Stay Tuned!']
-    }
-  ]
-}
 export default { name: 'Index', props:['thisUser'],
   data(){
     return {
@@ -111,14 +73,17 @@ export default { name: 'Index', props:['thisUser'],
     }
   },
   computed:{
+    lang(){
+      return this.$lang[this.$route.name.toLowerCase()]
+    },
     tabs(){
-      return tabs[this.$lang]
+      return this.lang.tabs
     },
     pages(){
-      return pages[this.$lang]
+      return this.lang.pages
     },
     text(){
-      return text[this.$lang]
+      return this.lang.text
     }
   }
  }

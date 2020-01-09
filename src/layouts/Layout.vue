@@ -13,6 +13,14 @@
             q-btn.inline(@click="$root.$emit('logout')" flat color="red")
               q-tooltip Logout
               q-icon(name="logout")
+        div
+          q-btn-dropdown(:label="langBtn" size="xl") 
+            q-list
+              q-item(v-for="lang of langList" :key="lang" v-if="lang != $lang.current_lang" clickable v-close-popup @click="$lang.setLang(lang)").text-center.full-width
+                .row.justify-center
+                  h4.no-margin.text-grey-9.text-center {{lang.toUpperCase()}} {{flag(lang)}}
+
+
     //- q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="traycolor" :width="55" :breakpoint="100")
     //-   q-item-label(header)
     //-   q-list {{$router.route}}
@@ -29,16 +37,22 @@
 </template>
 
 <script>
+import flag from 'locale-emoji'
 export default {  
   name: 'MyLayout',
   props:['thisUser'],
   data () {
     return {
-      pages:[
-        {name:"Home",icon:"home"},
-
-      ],
+      flag,
       leftDrawerOpen: false
+    }
+  },
+  mounted(){
+    console.log(this.$lang)
+  },
+  computed:{
+    langBtn(){
+      return this.$lang.current_lang + ' ' + flag(this.$lang.current_lang)
     }
   },
   methods:{
@@ -46,6 +60,8 @@ export default {
       if (this.$route.name === routeData.name) return
       else this.$router.push(routeData)
     }
+  },watch:{
+
   }
 }
 </script>

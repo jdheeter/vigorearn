@@ -18,8 +18,10 @@
     "eos-transit": "^4.0.2",
     "eos-transit-scatter-provider": "^4.0.2",
     "eosjs": "^20.0.0",
+    "locale-emoji": "^0.3.0",
     "quasar": "^1.0.0",
-    "vue-markdown": "^2.2.4"
+    "vue-markdown": "^2.2.4",
+    "vuejs-localization": "^1.0.3"
   },
   "devDependencies": {
     "@quasar/app": "^1.0.0",
