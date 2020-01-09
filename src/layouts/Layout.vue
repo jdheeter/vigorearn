@@ -18,7 +18,7 @@
             q-list
               q-item(v-for="lang of langList" :key="lang" v-if="lang != $lang.current_lang" clickable v-close-popup @click="$lang.setLang(lang)").text-center.full-width
                 .row.justify-center
-                  h4.no-margin.text-grey-9.text-center {{lang.toUpperCase()}} {{flag(lang)}}
+                  h4.no-margin.text-grey-9.text-center {{displayLang(lang)}} {{flag(lang)}}
 
 
     //- q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="traycolor" :width="55" :breakpoint="100")
@@ -52,10 +52,15 @@ export default {
   },
   computed:{
     langBtn(){
-      return this.$lang.current_lang + ' ' + flag(this.$lang.current_lang)
+      return this.displayLang(this.$lang.current_lang) + ' ' + flag(this.$lang.current_lang)
     }
   },
   methods:{
+    displayLang(lang) {
+      const split = lang.split('-')
+      if (split.length > 1) return lang.split('-')[1].toUpperCase()
+      else return lang.split('-')[0].toUpperCase()
+    },
     navigate(routeData){
       if (this.$route.name === routeData.name) return
       else this.$router.push(routeData)

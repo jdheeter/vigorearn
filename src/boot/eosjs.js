@@ -1,6 +1,4 @@
-import { initAccessContext } from 'eos-transit'
-import scatter from 'eos-transit-scatter-provider'
-import { Api, JsonRpc } from 'eosjs'
+import { JsonRpc } from 'eosjs'
 import Vue from 'vue'
 
 const rpc = new JsonRpc('https://eos.greymass.com')
@@ -11,9 +9,8 @@ async function getCandidates () {
     return res.rows
   } catch (error) {
     console.error(error)
-    alert(error.toString())
+    window.alert(error.toString())
     return []
-    return { error: error.toString() }
   }
 }
 
