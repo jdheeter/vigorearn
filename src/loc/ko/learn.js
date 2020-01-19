@@ -1,13 +1,13 @@
 module.exports =
 {
   text: [
-    'Learn about Vigor DAC',
-    'Three different levels to test your knowledge.'
+    'Vigor DAC 에 대하여 배우다',
+    '여러분의 이해도 테스를위한 3가지의 레밸이 존재합니다'
   ],
   tabs: [
-    'Beginner',
-    'Intermediate',
-    'Advanced'
+    '초급과정',
+    '중급과정',
+    '고급과정'
   ],
   pages: [
     {

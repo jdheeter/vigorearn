@@ -1,13 +1,13 @@
 module.exports =
 {
   text: [
-    'Learn about Vigor DAC',
-    'Three different levels to test your knowledge.'
+    'Vigor DAC hakkında bilgi edinin',
+    'Bilginizi test etmek için üç farklı seviye var.'
   ],
   tabs: [
-    'Beginner',
-    'Intermediate',
-    'Advanced'
+    'Acemi',
+    'Orta düzey',
+    'İleri düzey'
   ],
   pages: [
     {
@@ -15,8 +15,8 @@ module.exports =
       text: [
         'Temel bilgileri öğrenin',
         'Eğitim Materyallerini Okuyun',
-        'Quizi Tamamla',
-        'Eğer doğru olarak cevapladıysan, VIG token alacaksın.'
+        'Quizi Tamamlayın',
+        'Eğer doğru olarak cevapladıysan, VIG token alacaksınız.'
       ],
       link: [
         'https://docs.google.com/document/d/1h5Jm4g1UEbKVSIlZQNfhcnw_2-iX8lVtVmHHbs-RuUg/edit?usp=sharing',
@@ -29,7 +29,7 @@ module.exports =
     },
     {
       active: false,
-      text: ['Bizi izlemeye devam edin!']
+      text: ['Bizi takip etmeye devam edin!']
     }
   ]
 }

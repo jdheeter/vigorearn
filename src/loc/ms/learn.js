@@ -1,12 +1,12 @@
 module.exports =
 {
   text: [
-    'Learn about Vigor DAC',
-    'Three different levels to test your knowledge.'
+    'LBelajar tentang Vigor DAC',
+    'Tiga tahap yang berbeza untuk menguji pengetahuan anda.'
   ],
   tabs: [
-    'Beginner',
-    'Intermediate',
+    'Pemula',
+    'Pertengahan',
     'Advanced'
   ],
   pages: [

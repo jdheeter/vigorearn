@@ -8,13 +8,13 @@ const routes = [
     children: [
       { name: 'Home', path: '', component: () => import('pages/Index.vue') },
       { name: 'Register', path: '/register', component: () => import('pages/Register.vue') },
-      { name: 'Learn', path: '/learn', component: () => import('pages/Learn.vue') }
+      { name: 'Learn', path: '/learn', component: () => import('pages/Learn.vue') },
     ]
   }
 ]
 
 // Always leave this as last one
-if (process.env.MODE !== 'ssr') {
+if(process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
     component: () => import('pages/Error404.vue')
