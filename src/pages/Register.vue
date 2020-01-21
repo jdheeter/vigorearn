@@ -30,7 +30,6 @@
         
 </template>
 <script>
-const steps = require('../registerInstructions')
 export default { name: 'Index', props:['thisUser'], components:[],
   data(){
     return {
