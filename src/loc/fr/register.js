@@ -13,7 +13,7 @@ fenêtre contextuelle de Scatter.`,
 **SIGNER**.`,
 'Remplissez votre profil de candidat.',
 `Visitez la page officielle de Vigor Telegram et publiez un lien vers votre profil de candidat. Les
-dépositaires vous enverront le jeton VIGVOTE à séquestrer.`,
+dépositaires vous enverront le jeton VIG à séquestrer.`,
 'Accédez à **S’inscrire en tant que candidat**. Remplissez les informations requises. Cliquez sur le bouton ** INSCRIPTION **.'
 
   ]

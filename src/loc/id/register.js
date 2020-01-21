@@ -9,7 +9,7 @@ module.exports = {
     'Kunjungi [vigor.ai](https://vigor.ai) dan pilih **LOGIN**. ikuti segera popup dari Scatter.',
     'Navigasi ke **Sign the Consitution**, baca kontitusi, klik tombol **SIGN**.',
     'Isi profile Kandidat anda',
-    'Kunjungi halaman Telegram resmi Vigor dan poskan tautan ke profil kandidat Anda. Kustodian akan mengirimi anda VIGVOTE  untuk dipertaruhkan.',
+    'Kunjungi halaman Telegram resmi Vigor dan poskan tautan ke profil kandidat Anda. Kustodian akan mengirimi anda VIG  untuk dipertaruhkan.',
     'Navigasi ke **Register As Candidate**, isi informasi yang di perlukan, Klik tombol **REGISTER** .'
   ]
 }

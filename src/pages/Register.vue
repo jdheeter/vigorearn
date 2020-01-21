@@ -30,14 +30,6 @@
         
 </template>
 <script>
-const text = {
-  EN:[
-    `Before you start you need to have [Scatter](https://get-scatter.com) installed and own an EOS account.`,
-    `Register  Candidateship`,
-    `If you have any questions, just ask in the [Vigor Telegram](https://t.me/vigorstablecoin) chatroom.`,
-    `After you have registered, simply login on this page to continue.`
-  ]
-}
 const steps = require('../registerInstructions')
 export default { name: 'Index', props:['thisUser'], components:[],
   data(){

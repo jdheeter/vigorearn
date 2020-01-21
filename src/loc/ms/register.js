@@ -10,7 +10,7 @@ module.exports = {
     'Lawati [vigor.ai](https://vigor.ai) dan pilih **LOGIN**. Ikuti petikan dari pop timbul Scatter.',
     'Navigasi ke **Sign the Consitution**, baca perlembagaan, klik **SIGN** button.',
     'Fill out your Candiate Profile',
-    'Lawati halaman rasmi rasmi Telegram Vigor dan hantar pautan ke profil candidates anda dan Custodians akan mengirim VIGVOTE token ke stake.',
+    'Lawati halaman rasmi rasmi Telegram Vigor dan hantar pautan ke profil candidates anda dan Custodians akan mengirim VIG token ke stake.',
     'Navigasi ke **Register As Candidate**, isi maklumat yang diperlukan, dan klik **REGISTER** button.'
 
   ]
