@@ -7,7 +7,7 @@ module.exports = {
 
   ],
   steps: [
-    'Visita [vigor.ai](https://vigor.ai) e seleziona **LOGIN**. Segui il prompt dal popup di Scatter.',
+    'Visita [dac.vigor.ai](https://dac.vigor.ai) e seleziona **LOGIN**. Segui il prompt dal popup di Scatter.',
     'Naviga fino a  **Sign the Consitution**, leggi la costituzione, cliccail bottone **SIGN**.',
     'Compila il tuo profilo da Candidato',
     'Visita la pagina del canale Telegram di Vigor e posta il link al tuo profilo da candidato. I custodi ti invieranno un token VIG di stake',

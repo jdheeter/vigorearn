@@ -6,7 +6,7 @@ module.exports = {
     'Setelah Anda mendaftar, cukup login di halaman ini untuk melanjutkan.'
   ],
   steps: [
-    'Kunjungi [vigor.ai](https://vigor.ai) dan pilih **LOGIN**. ikuti segera popup dari Scatter.',
+    'Kunjungi [dac.vigor.ai](https://dac.vigor.ai) dan pilih **LOGIN**. ikuti segera popup dari Scatter.',
     'Navigasi ke **Sign the Consitution**, baca kontitusi, klik tombol **SIGN**.',
     'Isi profile Kandidat anda',
     'Kunjungi halaman Telegram resmi Vigor dan poskan tautan ke profil kandidat Anda. Kustodian akan mengirimi anda VIG  untuk dipertaruhkan.',

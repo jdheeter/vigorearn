@@ -6,7 +6,7 @@ module.exports = {
     '在注册完成后，在本页面登录。'
   ],
   steps: [
-    '访问 [vigor.ai](https://vigor.ai) 网站并点击 **登录**。完成 Scatter 发出的提示流程。',
+    '访问 [dac.vigor.ai](https://dac.vigor.ai) 网站并点击 **登录**。完成 Scatter 发出的提示流程。',
     '前往至 **签署宪法**，读完宪法，点击 **签署** 按钮。',
     '完善您的候选人介绍内容',
     '访问 Vigor 官方 Telegram，在这里发出您的候选人介绍链接。托管人将会发给您 VIG 通证，请将它质押。',

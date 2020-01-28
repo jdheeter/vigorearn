@@ -6,7 +6,7 @@ module.exports = {
     'Kayıt olduktan sonra, devam etmek için oturum açmanız yeterli.'
   ],
   steps: [
-    'Ziyaret Et [vigor.ai](https://vigor.ai) ve **Giriş Yap**. Scatter açılır penceresinden takip edin.', '  Takip et  **Sign the Consitution**, constitution\'ı oku, **SIGN** butonunu tıkla.',
+    'Ziyaret Et [dac.vigor.ai](https://dac.vigor.ai) ve **Giriş Yap**. Scatter açılır penceresinden takip edin.', '  Takip et  **Sign the Consitution**, constitution\'ı oku, **SIGN** butonunu tıkla.',
     'Aday Profilinizi doldurun',
     'Resmi Vigor Telegram sayfasını ziyaret et ve aday profilini paylaş.Adminler  sana stake için VIG tokeni gönderecek.',
     'Takip et **Aday olarak kayıt ol**, gerekli bilgileri doldur, **Kayıt Ol** butonuna tıkla.'

@@ -6,7 +6,9 @@
           div.q-pa-sm
             img(src="statics/vig.svg" style="width:150px; height:60px;").q-mt-sm   
         q-toolbar-title.no-margin.no-padding
-          h4.text-light-paragraph.no-margin Earn
+          .row
+            h4.text-light-paragraph.no-margin Earn
+            q-btn.on-right(icon="link" label="vigor.ai" @click="openURL('https://vigor.ai')")
         div(v-if="thisUser")
           .row
             q-toolbar-title {{thisUser.username}}
@@ -38,6 +40,7 @@
 
 <script>
 import flag from 'locale-emoji'
+import {openURL} from 'quasar'
 export default {  
   name: 'MyLayout',
   props:['thisUser'],
@@ -56,6 +59,7 @@ export default {
     }
   },
   methods:{
+    openURL,
     displayLang(lang) {
       const split = lang.split('-')
       if (split.length > 1) return lang.split('-')[1].toUpperCase()

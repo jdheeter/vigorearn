@@ -10,7 +10,7 @@
           h6.text-center
             md(:anchorAttributes="newTab" :source="text[0]")
           .row.justify-center
-            q-card.col-12.col-sm-10.col-md-5.q-pa-md.q-ma-md.bg-grey-9(v-for="(step,index) of steps" :key="step")
+            q-card.col-12.col-sm-10.col-md-5.q-pa-md.q-ma-md.bg-grey-9(v-for="(step,index) of steps" :key="step" v-if="index<2")
               .row.justify-center
                 img(:src="`statics/step${index+1}.png`" style="min-width:200px; max-width:600px; object-fit: scale-down;")
               .row

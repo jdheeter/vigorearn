@@ -7,7 +7,7 @@ module.exports = {
 
   ],
   steps: [
-`Visitez [vigor.ai](https://vigor.ai) et sélectionnez **CONNEXION**. Suivez l'invite à partir de la
+`Visitez [dac.vigor.ai](https://dac.vigor.ai) et sélectionnez **CONNEXION**. Suivez l'invite à partir de la
 fenêtre contextuelle de Scatter.`,
 `Naviguez jusqu'à **Signer la Constitution**, lisez la constitution, cliquez sur le bouton
 **SIGNER**.`,
