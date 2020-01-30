@@ -51,7 +51,7 @@ export default {
       if (!(await this.validForm())) return
       this.statusmsg = "Finding EOS Account..."
       this.page = 2
-      const candidates = (await this.$eos.getCandidates()).map(el => el.candidate_name)
+      const candidates = (await this.$eos.getCandidates()).filter(el => el.agreedtermsversion === 1 ).map(el => el.sender)
       const existing = candidates.find(el => el === this.form.username)
       if (existing) {
         setTimeout(el => {

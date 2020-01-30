@@ -5,7 +5,7 @@ const rpc = new JsonRpc('https://eos.greymass.com')
 
 async function getCandidates () {
   try {
-    const res = await rpc.get_table_rows({ json: true, code: 'daccustodia1', scope: 'daccustodia1', table: 'candidates', table_key: '', lower_bound: '', upper_bound: '', index_position: 1, key_type: '', limit: -1, reverse: false, show_payer: false })
+    const res = await rpc.get_table_rows({ json: true, code: 'dactoken1111', scope: 'dactoken1111', table: 'members', table_key: '', lower_bound: '', upper_bound: '', index_position: 1, key_type: '', limit: -1, reverse: false, show_payer: false })
     return res.rows
   } catch (error) {
     console.error(error)
