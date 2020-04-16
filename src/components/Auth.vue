@@ -51,8 +51,10 @@ export default {
       if (!(await this.validForm())) return
       this.statusmsg = "Finding EOS Account..."
       this.page = 2
-      const candidates = (await this.$eos.getCandidates()).filter(el => el.agreedtermsversion === 2 ).map(el => el.sender)
-      const existing = candidates.find(el => el === this.form.username)
+      const candidates = (await this.$eos.getCandidate(this.form.username)).filter(el => el.agreedtermsversion === 2 ).map(el => el.sender)
+      // console.log(candidates)
+      // const existing = candidates.find(el => el === this.form.username)
+      const existing = candidates[0] === this.form.username
       if (existing) {
         setTimeout(el => {
           this.statusmsg = "You are registered as a custodian."
