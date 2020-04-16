@@ -14,4 +14,15 @@ async function getCandidates () {
   }
 }
 
-Vue.prototype.$eos = { rpc, getCandidates }
+async function getCandidate (name) {
+  try {
+    const res = await rpc.get_table_rows({ json: true, code: 'dactoken1111', scope: 'dactoken1111', table: 'members', lower_bound: name, index_position: 1, limit: 1, reverse: false, show_payer: false })
+    return res.rows
+  } catch (error) {
+    console.error(error)
+    window.alert(error.toString())
+    return []
+  }
+}
+
+Vue.prototype.$eos = { rpc, getCandidates,getCandidate }
