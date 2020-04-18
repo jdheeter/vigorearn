@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     q-card.q-pa-lg(style="min-width:300px;")
-      p.text-center  Vigor Earn
+      p.text-center  Vigor Rewards
       div(v-if="page==1")
         p.text-center EOS Account Login
         q-form(@submit="login" ).text-white.q-pa-md
