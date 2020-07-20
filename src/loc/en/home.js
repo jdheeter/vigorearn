@@ -5,6 +5,6 @@ module.exports = {
     'If you are not yet a Vigor DAC Candidate, click here to learn how to sign up! ',
     'Register as Candidate',
     'Login',
-    'Welcome To Vigor Rewards'
+    'Vigor Rewards'
   ]
 }

@@ -2,14 +2,14 @@
   "name": "vigorearn-client",
   "version": "0.0.1",
   "description": " vigorearn",
-  "productName": "-vigorearn-client",
+  "productName": "vigorearn-client",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "build": "quasar build && cp _redirects dist/spa",
+    "dev": "quasar dev --modern",
+    "build": "quasar build --modern && cp _redirects dist/spa",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
