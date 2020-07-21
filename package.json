@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "quasar dev --modern",
     "build": "quasar build --modern && cp _redirects dist/spa",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "icons": "icongenie g -i ./src/statics/favicon.png"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
