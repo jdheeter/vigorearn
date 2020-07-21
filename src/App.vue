@@ -7,6 +7,8 @@
 </template>
 
 <script>
+
+
 import auth from 'components/Auth'
 export default { 
   name: 'App',
@@ -31,6 +33,17 @@ export default {
       this.$root.$on('logout',this.handleLogout)
       const selectedLang = window.localStorage.getItem('lang')
       if (selectedLang) this.$lang.setLang(selectedLang)
+
+      console.log(this.$route.query.join)
+      let script = document.createElement('script')
+      script.setAttribute('src', 'https://referlist.co/resources/referlist.js')
+      document.head.appendChild(script)
+      // document.addEventListener("DOMContentLoaded", function(event) {
+      //     window.referlist.initialize({ domain: 'joinvigor' }) 
+      // })
+      setTimeout(()=>{
+        window.referlist.initialize({ domain: 'joinvigor' }) 
+      },3000)
     },
     handleModal(data){
       if (data) this.showModal = true
@@ -76,3 +89,39 @@ export default {
   }
   }
 </script>
+<style>
+  .referlistcontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #referlistemail {
+    width: 250px;
+    margin-right: 10px;
+    height: 45px;
+    border-radius: 32px;
+    border-color: black;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  #referlistbutton {
+    width: 150px;
+    height: 45px;
+    border: none;
+    border-radius: 32px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+  }
+  .referlistinnercontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    /* padding-top: 60px; */
+  }
+</style>

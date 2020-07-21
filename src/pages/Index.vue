@@ -1,22 +1,23 @@
 <template lang="pug">
   q-page
-    .flex.flex-center
-      div
-        h3.text-grey-3.q-mb-md.text-center {{text[5]}}
-    .row.flex-center
-      .col.col-md-10.col-lg-8.col-xl-6
-        q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
-          h5.q-ma-md.text-center {{text[0]}}
-          .q-ma-sm
-          .row.justify-center
-            .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
-              .row.justify-center.q-pa-lg
-                q-btn(@click="$root.$emit('modal','auth')" color="primary" size="lg") {{text[4]}}
-              h6.q-ma-xs {{text[1]}}
-            .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
-              .row.justify-center.q-pa-lg
-                q-btn(@click="$router.push({name:'Register'})" color="primary" size="lg") {{text[3]}}
-              h6.q-ma-xs {{text[2]}}
+    div(v-if="$route.query.join != 'true'")
+      .flex.flex-center
+        div
+          h3.text-grey-3.q-mb-md.text-center {{text[5]}}
+      .row.flex-center
+        .col.col-md-10.col-lg-8.col-xl-6
+          q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
+            h5.q-ma-md.text-center {{text[0]}}
+            .q-ma-sm
+            .row.justify-center
+              .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
+                .row.justify-center.q-pa-lg
+                  q-btn(@click="$root.$emit('modal','auth')" color="primary" size="lg") {{text[4]}}
+                h6.q-ma-xs {{text[1]}}
+              .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
+                .row.justify-center.q-pa-lg
+                  q-btn(@click="$router.push({name:'Register'})" color="primary" size="lg") {{text[3]}}
+                h6.q-ma-xs {{text[2]}}
     .flex.flex-center
       div
         h3.text-grey-3.q-mb-md.text-center Use Vigor
@@ -46,18 +47,16 @@ export default { name: 'Index', props:['thisUser'],
     }
   },
   mounted(){
-    let script = document.createElement('script')
-    script.setAttribute('src', 'https://referlist.co/resources/referlist.js')
-    document.head.appendChild(script)
-    // document.addEventListener("DOMContentLoaded", function(event) {
-    //     window.referlist.initialize({ domain: 'joinvigor' }) 
-    // })
-    Vue.nextTick(()=>{
-      window.referlist.initialize({ domain: 'joinvigor' }) 
-    })
-    setTimeout(()=>{
-      window.referlist.initialize({ domain: 'joinvigor' }) 
-    },3000)
+    // console.log(this.$route.query.join)
+    // let script = document.createElement('script')
+    // script.setAttribute('src', 'https://referlist.co/resources/referlist.js')
+    // document.head.appendChild(script)
+    // // document.addEventListener("DOMContentLoaded", function(event) {
+    // //     window.referlist.initialize({ domain: 'joinvigor' }) 
+    // // })
+    // setTimeout(()=>{
+    //   window.referlist.initialize({ domain: 'joinvigor' }) 
+    // },3000)
   },
   methods:{
     join(){
@@ -74,39 +73,3 @@ export default { name: 'Index', props:['thisUser'],
   }
  }
 </script>
-<style>
-  .referlistcontainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #referlistemail {
-    width: 250px;
-    margin-right: 10px;
-    height: 45px;
-    border-radius: 32px;
-    border-color: black;
-    font-size: 16px;
-    padding-left: 10px;
-  }
-  #referlistbutton {
-    width: 150px;
-    height: 45px;
-    border: none;
-    border-radius: 32px;
-    font-size: 16px;
-    background-color: black;
-    color: white;
-  }
-  .referlistinnercontainer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 60px;
-    /* padding-top: 60px; */
-  }
-</style>

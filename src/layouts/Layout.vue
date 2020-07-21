@@ -7,7 +7,9 @@
             img(src="statics/vig.svg" style="width:150px; height:60px;").q-mt-sm   
         q-toolbar-title.no-margin.no-padding
           .row
-            h4.text-light-paragraph.no-margin Rewards
+            h4.text-light-paragraph.no-margin(v-if="$route.query.join != 'true'") Rewards
+            h4.text-light-paragraph.no-margin(v-else) Join
+
             q-btn.on-right(icon="link" label="vigor.ai" @click="openURL('https://vigor.ai')")
         div(v-if="thisUser")
           .row

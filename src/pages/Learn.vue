@@ -54,6 +54,23 @@
               .col-12
                 q-card.q-pa-md
                   h6.q-pa-md.q-ma-xs Stay tuned....
+          .flex.flex-center
+            div
+              h3.text-grey-3.q-mb-md.text-center Use Vigor
+          .row.flex-center
+            .col.col-md-10.col-lg-8.col-xl-6
+              q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
+                h5.q-ma-md.text-center Early adopters can gain access to the Vigor platform before anyone else
+                .q-ma-sm
+
+                .row.justify-center
+                  div.referlistcontainer
+                    div.referlistinnercontainer
+                      input(type="text" id="referlistemail" placeholder="youremail@provider.com")
+                      input(type="button" id="referlistbutton" value="Join Waitlist")
+                p(style="font-size:20px") Move up the waitlist by sharing your referral link with your friends
+                p(style="font-size:20px") Each day the Vigor DAC Custodians invite the top 10 invited users to participate on the Vigor platform.
+                p After the Vigor Beta period is over, anyone will be able to join instantly.
 </template>
 <script>
 export default { name: 'Index', props:['thisUser'],
