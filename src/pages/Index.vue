@@ -20,7 +20,7 @@
                 h6.q-ma-xs {{text[2]}}
     .flex.flex-center
       div
-        h3.text-grey-3.q-mb-md.text-center Use Vigor
+        h3.text-grey-3.q-mb-md.text-center Join Vigor
     .row.flex-center
       .col.col-md-10.col-lg-8.col-xl-6
         q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")

@@ -17,7 +17,7 @@
             q-btn.inline(@click="$root.$emit('logout')" flat color="red")
               q-tooltip Logout
               q-icon(name="logout")
-        div
+        div(v-if="!joinURL")
           q-btn-dropdown(:label="langBtn" size="xl") 
             q-list
               q-item(v-for="lang of langList" :key="lang" v-if="lang != $lang.current_lang" clickable v-close-popup @click="$lang.setLang(lang)").text-center.full-width
