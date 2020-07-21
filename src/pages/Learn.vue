@@ -79,6 +79,10 @@ export default { name: 'Index', props:['thisUser'],
       currentTab:0
     }
   },
+  mounted(){
+    window.referlist.initialize({ domain: 'joinvigor' }) 
+
+  },
   methods:{
     selectedTab(index){
       if (this.currentTab===index) return ['selected']
@@ -96,7 +100,7 @@ export default { name: 'Index', props:['thisUser'],
     tabs(){
       return this.lang.tabs
     },
-    pages(){
+    pages(){ 
       return this.lang.pages
     },
     text(){

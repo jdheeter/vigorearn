@@ -112,8 +112,9 @@ export default {
     border: none;
     border-radius: 32px;
     font-size: 16px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
+    cursor:pointer
   }
   .referlistinnercontainer {
     width: 100%;
