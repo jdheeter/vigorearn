@@ -33,8 +33,8 @@ export default {
       this.$root.$on('logout',this.handleLogout)
       const selectedLang = window.localStorage.getItem('lang')
       if (selectedLang) this.$lang.setLang(selectedLang)
-
-      console.log(this.$route.query.join)
+      
+      console.log(window.location.href)
       let script = document.createElement('script')
       script.setAttribute('src', 'https://referlist.co/resources/referlist.js')
       document.head.appendChild(script)

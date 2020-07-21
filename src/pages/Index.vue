@@ -1,6 +1,6 @@
 <template lang="pug">
   q-page
-    div(v-if="$route.query.join != 'true'")
+    div(v-if="!joinURL")
       .flex.flex-center
         div
           h3.text-grey-3.q-mb-md.text-center {{text[5]}}
@@ -64,6 +64,9 @@ export default { name: 'Index', props:['thisUser'],
     }
   },
   computed:{
+    joinURL(){
+      return window.location.href.search("join") > -1
+    },
     lang(){
       return this.$lang[this.$route.name.toLowerCase()]
     },
