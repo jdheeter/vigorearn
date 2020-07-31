@@ -3,12 +3,12 @@
     q-header(elevated)
       q-toolbar.text-white.shadow-0(flat)
         .row.items-center
-          div.q-pa-md
-            img(src="statics/vig.svg" style="width:150px; height:60px;")  
+          div.q-pa-sm
+            img(src="statics/vig.svg" style="width:150px; height:60px;").q-mt-sm   
         q-toolbar-title.no-margin.no-padding
           .row
-            h6.text-light-paragraph.no-margin(style="padding-top: 3px;")(v-if="!joinURL") Rewards
-            h5.text-light-paragraph.no-margin(v-else) Join
+            h4.text-light-paragraph.no-margin(v-if="!joinURL") Rewards
+            h4.text-light-paragraph.no-margin(v-else) Join
 
             q-btn.on-right(icon="link" label="vigor.ai" @click="openURL('https://vigor.ai')")
         div(v-if="thisUser")
@@ -18,11 +18,11 @@
               q-tooltip Logout
               q-icon(name="logout")
         div(v-if="!joinURL")
-          q-btn-dropdown(:label="langBtn" size="lg") 
+          q-btn-dropdown(:label="langBtn" size="xl") 
             q-list
               q-item(v-for="lang of langList" :key="lang" v-if="lang != $lang.current_lang" clickable v-close-popup @click="$lang.setLang(lang)").text-center.full-width
                 .row.justify-center
-                  h6.no-margin.text-grey-9.text-center {{displayLang(lang)}} {{flag(lang)}}
+                  h4.no-margin.text-grey-9.text-center {{displayLang(lang)}} {{flag(lang)}}
 
 
     //- q-drawer(v-model="leftDrawerOpen" show-if-above bordered content-class="traycolor" :width="55" :breakpoint="100")

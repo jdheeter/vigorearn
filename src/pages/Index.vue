@@ -3,28 +3,28 @@
     div(v-if="!joinURL")
       .flex.flex-center
         div
-          h4.text-grey-3.q-mb-md.text-center.text-uppercase {{text[5]}}
+          h3.text-grey-3.q-mb-md.text-center {{text[5]}}
       .row.flex-center
         .col.col-md-10.col-lg-8.col-xl-6
           q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
-            h6.justify-center.q-ma-md.text-center.vigor-reward-text {{text[0]}}
+            h5.q-ma-md.text-center {{text[0]}}
             .q-ma-sm
-            .row.justify-around
-              .col-12.col-md-6.col-lg-4.q-pa-lg
+            .row.justify-center
+              .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
                 .row.justify-center.q-pa-lg
-                  q-btn.text-capitalize(@click="$root.$emit('modal','auth')" color="primary") {{text[4]}}
-                p.text-body1.q-ma-xs.text-center {{text[1]}}
-              .col-12.col-md-6.col-lg-4.q-pa-lg
+                  q-btn(@click="$root.$emit('modal','auth')" color="primary" size="lg") {{text[4]}}
+                h6.q-ma-xs {{text[1]}}
+              .col-12.col-md-5.col-lg-4.bg-grey-9.q-pa-lg.q-ma-lg
                 .row.justify-center.q-pa-lg
-                  q-btn.text-capitalize.q-btn-text(@click="$router.push({name:'Register'})" color="primary") {{text[3]}}
-                p.text-body1.q-ma-xs.text-center {{text[2]}}
+                  q-btn(@click="$router.push({name:'Register'})" color="primary" size="lg") {{text[3]}}
+                h6.q-ma-xs {{text[2]}}
     .flex.flex-center
       div
-        h4.text-uppercase.text-grey-3.q-mb-md.text-center Join Vigor
+        h3.text-grey-3.q-mb-md.text-center Join Vigor
     .row.flex-center
       .col.col-md-10.col-lg-8.col-xl-6
         q-card.q-ma-md.q-pa-md.text-white.bg-bg2(style="min-height:200px;")
-          h6.q-ma-md.text-center Early adopters can gain access to the Vigor platform before anyone else
+          h5.q-ma-md.text-center Early adopters can gain access to the Vigor platform before anyone else
           .q-ma-sm
 
           .row.justify-center
@@ -32,9 +32,9 @@
               div.referlistinnercontainer
                 input(type="text" id="referlistemail" placeholder="youremail@provider.com")
                 input(type="button" id="referlistbutton" value="Join Waitlist" @click="join")
-          p.vigor-reward-text.text-center(style="font-size:20px") Move up the waitlist by sharing your referral link with your friends
-          p.vigor-reward-text.text-center(style="font-size:20px") Each day the Vigor DAC Custodians invite the top 10 invited users to participate on the Vigor platform.
-          p.vigor-reward-text.text-center.text-muted After the Vigor Beta period is over, anyone will be able to join instantly.
+          p(style="font-size:20px") Move up the waitlist by sharing your referral link with your friends
+          p(style="font-size:20px") Each day the Vigor DAC Custodians invite the top 10 invited users to participate on the Vigor platform.
+          p After the Vigor Beta period is over, anyone will be able to join instantly.
       //- img(src="~assets/vigorearnlogo.png" style="max-width:100%; overflow:hidden; height:400px; width:100%; object-fit: cover;")
     .row.flex-center.text-white
 
